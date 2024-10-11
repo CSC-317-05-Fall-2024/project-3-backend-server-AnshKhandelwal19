@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     //Find the header tag and load html
     const header = document.querySelector('header');
     header.innerHTML = `
-        <img src = "images/japan_header.jpeg" class = "header_image">
-        <h1>Japan</h1>
+        <img src = "/images/japan_header.jpeg" class = "header_image">
+        <h1 id="location-header">Japan</h1>
     `;
 
     //Find the nav tag and load html

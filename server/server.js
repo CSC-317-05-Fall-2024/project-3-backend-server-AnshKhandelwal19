@@ -36,6 +36,12 @@ app.get('/restaurants', (req, res) => {
     res.render('restaurants', { restaurantData });
 });
 
+app.get('/restaurants/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const restaurant = getRestaurant(id);
+    res.render('restaurant-details', { restaurant });
+});
+
 //Start listening on the port
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

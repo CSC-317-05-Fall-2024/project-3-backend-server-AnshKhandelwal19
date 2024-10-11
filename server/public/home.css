@@ -16,7 +16,7 @@ header {
     grid-row: 1;
 }
 
-h1 {
+#location-header {
     grid-column: 1;
     grid-row: 1;
     justify-self: center;
