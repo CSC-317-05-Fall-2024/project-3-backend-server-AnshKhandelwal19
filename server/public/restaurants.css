@@ -1,0 +1,96 @@
+body {
+    background-color: beige;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.header_image {
+    width: 100vw;
+    height: 550px;
+    object-fit: cover;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+h1 {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    font-size: 200px;
+    color: white;
+    font-weight: bold;
+}
+
+p {
+    text-align: center;
+    padding: 10px 0px;
+    margin: 0px;
+
+}
+
+nav {
+    background-color: navy;
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+a {
+    color: white;
+    font-size: 30px;
+}
+
+#content-container {
+    display: grid;
+    padding: 40px 300px;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+    justify-items: center;
+    align-items: center;
+}
+
+.restaurant-container {
+    background-color: lightgray;
+    width: 300px;
+    height: 500px
+}
+
+.restaurant-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 250px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.restaurant-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+button {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    align-self: flex-end;
+}
+
+footer {
+    height:30px;
+    color: white;
+    background-color: gray;
+    text-align:right;
+}
