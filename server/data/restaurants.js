@@ -47,6 +47,7 @@ const getNextId = () => {
 
 // Get a list of restaurants
 const getRestaurants = () => {
+    return restaurantData;
 };
 
 

@@ -10,7 +10,7 @@ header {
 }
 .header_image {
     width: 100vw;
-    height: 550px;
+    height: 350px;
     object-fit: cover;
     grid-column: 1;
     grid-row: 1;
@@ -21,7 +21,7 @@ h1 {
     grid-row: 1;
     justify-self: center;
     align-self: center;
-    font-size: 200px;
+    font-size: 120px;
     color: white;
     font-weight: bold;
 }
@@ -70,9 +70,10 @@ a {
     flex-direction: column;
     align-items: center;
     width: 300px;
-    height: 250px;
+    height: 200px;
     font-size: 18px;
     font-weight: bold;
+    position: relative;
 }
 
 .restaurant-img {
@@ -82,10 +83,25 @@ a {
 }
 
 button {
-    background: transparent;
+    background-color: lightgray;
     border: none;
-    font-size: 24px;
-    align-self: flex-end;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    bottom: 10px; 
+    right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.delete-button-image {
+    width: 40px;
+    height: 40px;
+}
+
+button:hover {
+    background-color: white;
 }
 
 footer {

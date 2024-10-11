@@ -10,7 +10,7 @@ header {
 }
 .header_image {
     width: 100vw;
-    height: 550px;
+    height: 350px;
     object-fit: cover;
     grid-column: 1;
     grid-row: 1;
@@ -21,7 +21,7 @@ h1 {
     grid-row: 1;
     justify-self: center;
     align-self: center;
-    font-size: 200px;
+    font-size: 120px;
     color: white;
     font-weight: bold;
 }

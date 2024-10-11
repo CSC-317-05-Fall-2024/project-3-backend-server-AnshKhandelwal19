@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import restaurantData from './data/restaurants.js'
+import { getRestaurants, getRestaurant, createRestaurant, deleteRestaurant } from './data/restaurants.js'
 
 //create express app and port variable
 const app = express();
@@ -32,6 +32,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 //Render ejs file with imported data
 app.get('/restaurants', (req, res) => {
+    const restaurantData = getRestaurants();
     res.render('restaurants', { restaurantData });
 });
 
