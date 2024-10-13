@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector('nav');
     nav.innerHTML = `
         <a href="/">Home</a>
-        <a href="attractions">Attractions</a>
-        <a href="restaurants">Restaurants</a>
-        <a href="new-restaurant">New Restaurant</a>
+        <a href="/attractions">Attractions</a>
+        <a href="/restaurants">Restaurants</a>
+        <a href="/new-restaurant">New Restaurant</a>
     `;
 
     //Find the footer tag and load html

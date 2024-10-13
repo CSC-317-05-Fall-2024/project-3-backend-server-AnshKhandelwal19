@@ -47,6 +47,7 @@ footer {
     color: white;
     background-color: gray;
     text-align:right;
+    
 }
 
 #form-header {
@@ -75,5 +76,5 @@ p {
 
 input {
     width: 400px;
-    height: 20px
+    height: 20px;
 }
