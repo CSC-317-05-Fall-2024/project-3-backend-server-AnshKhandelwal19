@@ -1,7 +1,8 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { getRestaurants, getRestaurant, createRestaurant, deleteRestaurant } from './data/restaurants.js'
+import { getRestaurants, getRestaurant} from './data/restaurants.js'
+import { backendRouter } from './routes/api.js';
 
 //create express app and port variable
 const app = express();
@@ -12,6 +13,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
+app.use('/api', backendRouter);
 
 //App GET requests => Return html file for get requests to the different web pages
 app.get('/', (req, res) => {
@@ -30,12 +33,13 @@ app.get('/new-restaurant', (req, res) => {
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-//Render ejs file with imported data
+//Render restaurant ejs file with imported data
 app.get('/restaurants', (req, res) => {
     const restaurantData = getRestaurants();
     res.render('restaurants', { restaurantData });
 });
 
+//Render restaurant-details ejs file with specific restaurant id
 app.get('/restaurants/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const restaurant = getRestaurant(id);

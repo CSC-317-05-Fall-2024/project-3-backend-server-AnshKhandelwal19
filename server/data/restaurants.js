@@ -65,6 +65,12 @@ const getRestaurant = (id) => {
 
 // Create a new restaurant entry
 const createRestaurant = (newRestaurant) => {
+    const restaurant = {
+        id: getNextId(),
+        ...newRestaurant
+    };
+    restaurantData.push(restaurant);
+    return restaurant;
 };
 
 // Delete a restaurant by id
