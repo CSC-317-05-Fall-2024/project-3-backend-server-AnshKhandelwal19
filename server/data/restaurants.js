@@ -73,6 +73,23 @@ const createRestaurant = (newRestaurant) => {
     return restaurant;
 };
 
+//Edit Restaurant
+const editRestaurant = (id, newData) => {
+    let restuarantToUpdate = getRestaurant(id);
+    restaurantData = restaurantData.map(restaurant => {
+        if(restaurant.id !== id) {
+            return restaurant;
+        }
+        let updateRestaurant = {
+            ...restaurant,
+            ...newData
+        };
+        return updateRestaurant;
+    });
+    let updateRestaurant = getRestaurant(id);
+    return updateRestaurant;
+};
+
 // Delete a restaurant by id
 const deleteRestaurant = (id) => {
     const currLength = restaurantData.length;
@@ -82,4 +99,4 @@ const deleteRestaurant = (id) => {
         throw new Error(`Restaurant ${id} not found`);
 };
 
-export { getRestaurants, getRestaurant, createRestaurant, deleteRestaurant };
+export { getRestaurants, getRestaurant, createRestaurant, editRestaurant, deleteRestaurant };
