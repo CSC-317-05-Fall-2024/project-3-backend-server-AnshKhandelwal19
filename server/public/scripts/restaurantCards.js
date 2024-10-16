@@ -15,7 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const deleteRestaurantCard = (divToDelete) => {
     // Remove the div from the DOM
-    if (divToDelete) {
-        divToDelete.remove();
-    }
+    const id = divToDelete.dataset.value;
+    fetch(`/api/restaurants/${id}`, {
+        method: "DELETE"
+    }).then(() => {
+        window.location.reload();
+    });
 };

@@ -4,6 +4,8 @@ const handleSubmit = async (event) => {
     // Extract fields from the form, and
     // send a request to create a new restaurant
 
+    
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {

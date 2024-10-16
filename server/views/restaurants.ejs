@@ -13,7 +13,7 @@
         <div id="content-container">
             <%//Loops through data object array and loads divs with data within each object%>
             <% for (let restaurant of restaurantData) { %>
-                <div class="restaurant-container">
+                <div class="restaurant-container" data-value="<%= restaurant.id %>">
                     <img class="restaurant-img" src= "<%= restaurant.photo %>">
                     <div class="restaurant-info">
                         <p class="restaurant-name"><%= restaurant.name %></p>
