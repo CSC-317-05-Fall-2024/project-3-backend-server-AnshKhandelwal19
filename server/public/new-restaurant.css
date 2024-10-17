@@ -63,6 +63,13 @@ footer {
     row-gap: 25px;
 }
 
+#new-restaurant-form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+}
+
 .input-container {
     display: flex;
     flex-direction: column;

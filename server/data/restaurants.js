@@ -65,8 +65,9 @@ const getRestaurant = (id) => {
 
 // Create a new restaurant entry
 const createRestaurant = (newRestaurant) => {
-    const restaurant = {
+    let restaurant = {
         id: getNextId(),
+        photo: "images/no_image.png",
         ...newRestaurant
     };
     restaurantData.push(restaurant);
