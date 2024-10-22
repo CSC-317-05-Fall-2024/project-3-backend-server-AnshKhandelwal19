@@ -82,7 +82,7 @@ const editRestaurant = (id, newData) => {
             return restaurant;
         }
         let updateRestaurant = {
-            ...restaurant,
+            ...restuarantToUpdate,
             ...newData
         };
         return updateRestaurant;
