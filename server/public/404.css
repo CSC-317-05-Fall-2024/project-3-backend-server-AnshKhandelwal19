@@ -61,6 +61,8 @@ p {
     font-size: 46px;
     color: maroon;
     font-weight: bold;
+    margin: 0px;
+    padding-top: 140px;
 }
 
 footer {
