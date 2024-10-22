@@ -45,7 +45,12 @@ app.get('/restaurants', (req, res) => {
 app.get('/restaurants/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const restaurant = getRestaurant(id);
-    res.render('restaurant-details', { restaurant });
+    if(!restaurant) {
+        res.render('404', {id});
+    }
+    else {
+        res.render('restaurant-details', { restaurant });
+    }
 });
 
 //Start listening on the port
